@@ -162,7 +162,7 @@ def build_index(
         metadata={"hnsw:space": "cosine"},
     )
 
-    batch = 256
+    batch = 16
     for start in range(0, len(chunks), batch):
         window = chunks[start : start + batch]
         collection.add(
